@@ -1,8 +1,8 @@
 # Unified Tool Vault
 
-This repository is maintained automatically by the project generator.
+This repository is maintained automatically by the project updater.
 
-It stores a compact source bundle for every successfully generated project, grouped by
+It stores a compact source bundle for every successfully new project, grouped by
 platform/category and programming language. Each JSON bundle contains the complete
 file map required to reconstruct that project.
 
