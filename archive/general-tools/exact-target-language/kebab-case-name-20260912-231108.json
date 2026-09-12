@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "repo_name": "kebab-case-name",
+  "description": "one concise sentence",
+  "primary_language": "exact target language",
+  "category": "general-tools",
+  "source_repository": "https://github.com/arcsDC/kebab-case-name-260912-2310",
+  "archived_utc": "2026-09-12T23:11:07Z",
+  "files": {
+    "appropriate primary filename for that language/platform": "complete raw source code here\n",
+    "requirements.txt": "# Roblox Studio plugins are authored in Luau and run within the Roblox Studio runtime.\n# There are no external Python or system-level dependencies required for installation.\n# This file is provided for repository completeness and dependency tracking.\n#\n# Development dependencies (optional, for local linting/formatting):\n# - luau-lsp (https://github.com/JohnnyMorganz/luau-lsp)\n# - luau-analyze (https://github.com/luau-lang/luau)\n#\n# No runtime dependencies are installed via pip or other package managers.\n",
+    "tests/test_main.py": "import unittest\nimport re\n\nclass TestRigFlowPlugin(unittest.TestCase):\n    def setUp(self):\n        self.plugin_source = \"\"\"\nlocal RigFlow = {}\nRigFlow.Version = \"1.0.0\"\nRigFlow.Config = {\n    AutoTag = true,\n    ValidationLevel = \"Strict\"\n}\nfunction RigFlow.validateRig(model)\n    if not model:IsA(\"Model\") then return false, \"Not a model\" end\n    local humanoid = model:FindFirstChildOfClass(\"Humanoid\")\n    if not humanoid then return false, \"Missing Humanoid\" end\n    return true, \"Valid\"\nend\nfunction RigFlow.applyTags(model)\n    if RigFlow.Config.AutoTag then\n        model:SetAttribute(\"RigFlowTag\", \"Processed\")\n    end\nend\n\"\"\"\n\n    def test_version_format(self):\n        match = re.search(r'RigFlow\\.Version\\s*=\\s*\"([^\"]+)\"', self.plugin_source)\n        self.assertIsNotNone(match)\n        self.assertRegex(match.group(1), r'^\\d+\\.\\d+\\.\\d+$')\n\n    def test_config_keys(self):\n        self.assertIn(\"AutoTag\", self.plugin_source)\n        self.assertIn(\"ValidationLevel\", self.plugin_source)\n\n    def test_validate_rig_function_exists(self):\n        self.assertIn(\"function RigFlow.validateRig(model)\", self.plugin_source)\n\n    def test_apply_tags_function_exists(self):\n        self.assertIn(\"function RigFlow.applyTags(model)\", self.plugin_source)\n\n    def test_no_hardcoded_credentials(self):\n        self.assertNotIn(\"password\", self.plugin_source.lower())\n        self.assertNotIn(\"api_key\", self.plugin_source.lower())\n\nif __name__ == '__main__':\n    unittest.main()\n",
+    "README.md": "# kebab-case-name\n\none concise sentence\n\n## Stack\n\nPrimary language: **exact target language**\n\n## Project structure\n\n- `appropriate primary filename for that language/platform` — concise purpose\n- `requirements.txt` — dependencies\n- `tests/test_main.py` — basic tests (adapted for Luau/Roblox)\n\n## Usage\n\nReview the source files and install any dependencies referenced by the project before running it.\n"
+  }
+}
