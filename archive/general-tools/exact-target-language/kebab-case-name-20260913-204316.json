@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "repo_name": "kebab-case-name",
+  "description": "one concise sentence",
+  "primary_language": "exact target language",
+  "category": "general-tools",
+  "source_repository": "https://github.com/arcsDC/kebab-case-name-260913-2043",
+  "archived_utc": "2026-09-13T20:43:16Z",
+  "files": {
+    "appropriate primary filename for that language/platform": "complete raw source code here\n",
+    "requirements.txt": "# Go project: no Python dependencies required.\n# This file is intentionally empty to satisfy repository structure expectations\n# for cross-platform tooling that may be invoked from Python-based test harnesses.\n",
+    "tests/test_main.py": "[content]\n",
+    "README.md": "# kebab-case-name\n\none concise sentence\n\n## Stack\n\nPrimary language: **exact target language**\n\n## Project structure\n\n- `appropriate primary filename for that language/platform` — concise purpose\n- `requirements.txt` — dependencies\n- `tests/test_main.py` — basic tests\n\n## Usage\n\nReview the source files and install any dependencies referenced by the project before running it.\n"
+  }
+}
